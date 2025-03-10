@@ -10,7 +10,7 @@ import pygame
 class Ship:
     """Class to manage player Ship"""
 
-    def __init__(self, ai_game: AlienInvasion) -> None:
+    def __init__(self, ai_game) -> None:
         """Intialize player Ship and set starting position"""
 
         self.game_screen = ai_game.screen
