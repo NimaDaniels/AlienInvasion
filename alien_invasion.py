@@ -11,6 +11,7 @@ import sys
 import pygame
 
 from settings import Settings
+from ship import Ship
 
 
 class AlienInvasion:
@@ -26,8 +27,9 @@ class AlienInvasion:
             self.settings.screen_height)
         )
         self.background_color = (self.settings.background_color)
-
         pygame.display.set_caption("Alien: Invasion ( By NimaDaniels )")
+
+        self.player_ship = Ship(self)
 
     def run_game(self) -> None:
         """Start main game loop"""
@@ -44,3 +46,4 @@ class AlienInvasion:
 if __name__ == "__main__":
     alien_game = AlienInvasion()
     alien_game.run_game()
+    print(alien_game.player_ship.game_screen.get_size())
