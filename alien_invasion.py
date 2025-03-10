@@ -46,4 +46,3 @@ class AlienInvasion:
 if __name__ == "__main__":
     alien_game = AlienInvasion()
     alien_game.run_game()
-    print(alien_game.player_ship.game_screen.get_size())
