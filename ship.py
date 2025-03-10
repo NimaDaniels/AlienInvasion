@@ -18,3 +18,9 @@ class Ship:
 
         self.image = pygame.image.load("images/player_ship.bmp")
         self.rect = self.image.get_rect()
+
+        self.rect.midbottom = self.game_screen_rect.midbottom
+
+    def blitme(self) -> None:
+        """Draw player Ship on the screen"""
+        self.game_screen.blit(self.image, self.rect)
