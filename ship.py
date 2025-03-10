@@ -9,10 +9,10 @@ from alien_invasion import AlienInvasion
 
 
 class Ship:
-    """Class to manage ship."""
+    """Class to manage player Ship"""
 
     def __init__(self, ai_game: AlienInvasion) -> None:
-        """Intialize ship and set starting position"""
+        """Intialize player Ship and set starting position"""
 
         self.game_screen = ai_game.screen
         self.game_screen_rect = ai_game.screen.get_rect()
