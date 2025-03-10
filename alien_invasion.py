@@ -10,14 +10,22 @@ khodenimacollab@gmail.com
 import sys
 import pygame
 
+from settings import Settings
+
 
 class AlienInvasion:
     def __init__(self) -> None:
         """Main class to manage game assets and behaviors."""
 
+        self.settings = Settings()
         pygame.init()
-        self.screen = pygame.display.set_mode((1200, 800))
-        self.background_color = (255, 255, 255)
+
+        self.screen = pygame.display.set_mode(
+        (
+            self.settings.screen_width,
+            self.settings.screen_height)
+        )
+        self.background_color = (self.settings.background_color)
 
         pygame.display.set_caption("Alien: Invasion ( By NimaDaniels )")
 
